@@ -34,6 +34,7 @@ public class Blue_2
         {
             get
             {
+                if (_marks == null) return 0;
                 int total = 0; 
                 for (int i = 0; i<2; i++)
                 {

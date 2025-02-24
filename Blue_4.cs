@@ -47,6 +47,7 @@ public class Blue_4
 
         public void PlayMatch(int result)
         {
+            if (_scores == null) return;
             int[] newScores = new int[_scores.Length+1];
             Array.Copy(_scores, newScores, _scores.Length);
             newScores[_scores.Length] = result;
@@ -88,16 +89,16 @@ public class Blue_4
             _count = 0;
         }
 
-        private bool IsTeamInGroup(Team team)
-        {
-            string[] names = new string[_teams.Length];
-            for (int i = 0; i<_teams.Length; i++)
-                names[i] = _teams[i].Name;
-            return (Array.BinarySearch(names, team.Name) >= 0);
-        }
+        // private bool IsTeamInGroup(Team team)
+        // {
+            // string[] names = new string[_teams.Length];
+            // for (int i = 0; i<_teams.Length; i++)
+                // names[i] = _teams[i].Name;
+            // return (Array.BinarySearch(names, team.Name) >= 0);
+        // }
         public void Add(Team team)
         {
-            if (_teams == null || IsTeamInGroup(team) || _count == 12) 
+            if (_teams == null || _count == 12) 
                 return;
             else
                 _teams[_count++] = team;

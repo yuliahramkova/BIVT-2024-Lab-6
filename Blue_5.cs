@@ -80,7 +80,10 @@ public class Blue_5
                     if (sportsman.Place < topPlace && sportsman.Place != 0)
                         topPlace = sportsman.Place;
                 }
-                return topPlace;
+                // if (topPlace != 19)
+                    return topPlace;
+                // else
+                    // return 0;
             }
         }
         
@@ -93,6 +96,7 @@ public class Blue_5
 
         private bool IsSportsmanInTeam(Sportsman sportsman)
         {
+            if (_sportsmen == null) return false;
             string[] names = new string[_sportsmen.Length];
             for (int i = 0; i<_sportsmen.Length; i++)
                 names[i] = _sportsmen[i].Name;
@@ -106,7 +110,7 @@ public class Blue_5
         }
         public void Add(Sportsman[] sportsmen)
         {
-            if (_sportsmen == null) 
+            if (_sportsmen == null || sportsmen == null) 
                 return;
             foreach(Sportsman sportsman in sportsmen)
                 Add(sportsman);
