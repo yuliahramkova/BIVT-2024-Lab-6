@@ -18,7 +18,7 @@ public class Blue_4
         {
             get
             {
-                if (_scores == null || _scores.Length == 0) 
+                if (_scores == null) 
                     return default(int[]);
                 int[] newScores = new int[_scores.Length];
                 for (int i = 0; i<_scores.Length; i++)
@@ -136,7 +136,7 @@ public class Blue_4
             }
             while (j < size/2)
             {
-                result.Add(group1.Teams[j++]);
+                result.Add(group2.Teams[j++]);
             }
             return result;
         }

@@ -74,7 +74,7 @@ public class Blue_5
             get 
             {
                 if (_sportsmen == null) return 0;
-                int topPlace = 19;
+                int topPlace = 18;
                 foreach (Sportsman sportsman in _sportsmen)
                 {
                     if (sportsman.Place < topPlace && sportsman.Place != 0)
