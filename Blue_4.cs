@@ -128,7 +128,7 @@ public class Blue_4
                 if (group1.Teams[i].TotalScore >= group2.Teams[j].TotalScore)
                     result.Add(group1.Teams[i++]);
                 else
-                    result.Add(group1.Teams[j++]);
+                    result.Add(group2.Teams[j++]);
             }
             while (i < size/2)
             {
