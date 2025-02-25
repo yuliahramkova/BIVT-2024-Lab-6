@@ -83,17 +83,17 @@ public class Blue_5
             _count = 0;
         }
 
-        private bool IsSportsmanInTeam(Sportsman sportsman)
-        {
-            if (_sportsmen == null) return false;
-            string[] names = new string[_sportsmen.Length];
-            for (int i = 0; i<_sportsmen.Length; i++)
-                names[i] = _sportsmen[i].Name;
-            return (Array.BinarySearch(names, sportsman.Name) >= 0);
-        }
+        // private bool IsSportsmanInTeam(Sportsman sportsman)
+        // {
+            // if (_sportsmen == null) return false;
+            // string[] names = new string[_sportsmen.Length];
+            // for (int i = 0; i<_sportsmen.Length; i++)
+                // names[i] = _sportsmen[i].Name;
+            // return (Array.BinarySearch(names, sportsman.Name) >= 0);
+        // }
         public void Add(Sportsman sportsman)
         {
-            if (_sportsmen == null || IsSportsmanInTeam(sportsman) || _count == 6)
+            if (_sportsmen == null || _count == 6)
                 return;
             _sportsmen[_count++] = sportsman;
         }
