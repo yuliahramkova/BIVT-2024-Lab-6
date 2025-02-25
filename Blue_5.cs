@@ -44,19 +44,8 @@ public class Blue_5
         private int _count;
 
         public string Name => _name;
-        public Sportsman[] Sportsmen 
-        {
-            get
-            {
-                if (_sportsmen == null) 
-                    return default(Sportsman[]);
-                Sportsman[] newSportsmen = new Sportsman[6];
-
-                for (int i = 0; i<6; i++)
-                    newSportsmen[i] = _sportsmen[i];
-                return newSportsmen;
-            }
-        }
+        public Sportsman[] Sportsmen => _sportsmen;
+    
         public int SummaryScore
         {
             get
